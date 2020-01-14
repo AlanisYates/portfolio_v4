@@ -338,6 +338,7 @@ main#home h1 {
 }
 
 .projects {
+  padding-top: 10px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -345,17 +346,58 @@ main#home h1 {
   grid-gap: 0.7rem;
 }
 
+.projects .container {
+  position: relative;
+  width: 100%;
+}
+
+.projects .container .overlay {
+  position: absolute;
+  bottom: 0;
+  background: black;
+  background: rgba(0, 0, 0, 0.9);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+.projects .container .overlay .p-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+.projects .container .overlay .p-description h1 {
+  font-weight: bold;
+}
+
+.projects .container .overlay:hover {
+  opacity: 1;
+}
+
 .projects img {
   width: 100%;
   border-radius: 10px;
   border: 3px #ffffff solid;
-}
-
-.projects img:hover {
-  opacity: 0.5;
-  border-color: #1a9ce7;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
 }
 
 .boxes {
@@ -436,6 +478,11 @@ main#home h1 {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
+  .projects .container .overlay .p-description {
+    text-align: center;
+    color: white;
+    font-size: 8px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -484,6 +531,11 @@ main#home h1 {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
+  .projects .container .overlay .p-description {
+    text-align: center;
+    color: white;
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -502,6 +554,11 @@ main#home h1 {
   .projects {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  .projects .container .overlay .p-description {
+    text-align: center;
+    color: white;
+    font-size: 10px;
   }
 }
 /*# sourceMappingURL=main.css.map */

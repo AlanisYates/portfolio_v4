@@ -3,6 +3,7 @@
 @include mediaXl {
   .projects {
     grid-template-columns: repeat(4, 1fr);
+    
   }
 }
 // Desktops & Laptops
@@ -10,6 +11,15 @@
 @include mediaLg {
   .projects {
     grid-template-columns: repeat(3, 1fr);
+    .container {
+      .overlay {
+        .p-description {
+          text-align: center;
+          color: white;
+          font-size: 8px;
+        }
+      }
+    }
   }
 }
 // Tablets & Small Laptops
@@ -66,6 +76,16 @@
 
   .projects {
     grid-template-columns: repeat(2, 1fr);
+   
+    .container {
+      .overlay {
+        .p-description {
+          text-align: center;
+          color: white;
+          font-size: 10px;
+        }
+      }
+    }
   }
 }
 // Smartphones
@@ -76,7 +96,6 @@
   }
 
   .menu-branding {
-
     .lg-over {
       // padding-top: 10px;
       align-items: center;
@@ -84,11 +103,21 @@
     }
 
     .sm-heading {
-display: none;
+      display: none;
     }
   }
 
   .projects {
     grid-template-columns: 1fr;
+
+    .container {
+      .overlay {
+        .p-description {
+          text-align: center;
+          color: white;
+          font-size: 10px;
+        }
+      }
+    }
   }
 }
